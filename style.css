@@ -167,10 +167,17 @@ u{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 6em 1rem;
+    padding: 8em 1rem;
+}
+
+.testimonials-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .testimonials-card{
+    margin-top: 2em;
     background-color: #f6f6f6;
     display: flex;
     gap: 3em;
@@ -189,9 +196,8 @@ u{
 
 .testimonials-image{
     background-color: white;
-    padding: 0.5em;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 45%;
 }
 
 #ceo{
@@ -199,7 +205,7 @@ u{
     width: auto;
     padding: 0.5em 1em;
     filter: grayscale(100);
-    transform: translateX(5%);
+    transform: translateX(5%) translateY(5%);
 }
 
 /* -- Seção Blog do Richard -- */
