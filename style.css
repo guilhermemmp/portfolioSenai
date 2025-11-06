@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     min-height: 100vh;
     position: relative;
@@ -196,4 +200,176 @@ u{
     padding: 0.5em 1em;
     filter: grayscale(100);
     transform: translateX(5%);
+}
+
+/* -- Seção Blog do Richard -- */
+
+.blogs {
+    background: white;
+    padding: 100px 10%; /* espaçamento pra separar do topo e das laterais */
+    position:  relative; /* parece que é o unico jeito de fazer o texto do funo (NAO MEXER)*/
+    overflow:  hidden; /* Isso impede que as coisas INVADAM  as seções dos outros, reocomendo todos usarem*/
+}
+
+.blogs::before{ /* Elemento que só existe visualemente*/
+    content: "My Blog Post"; /* Texto que vai aparecer no fundo (NAO MEXER)*/
+    position: absolute; /* Permite posicionar o texto onde quiser (NAO MEXER)*/
+    top: 20px; /* Distância do topo (pra subir ou descer)*/
+    left: 50%; /* Centraliza horizontalmente (NAO MEXER)*/
+    transform: translateX(-50%); /*Aparentemente Centraliza horizontalmente (NAO MEXER)*/
+    
+    font-size: 180px;
+    font-weight: 900;
+    color: #f3f3f3;
+    white-space: nowrap; /* Garante que o texto não quebre linha */
+    z-index: 0; /* Coloca o texto atrás dos outros elementos */
+}
+
+.blogs-cabecalho{
+    display: flex;
+    justify-content: space-between; /*Seapara os itens para as extremidades (Titulos --- botao)*/
+    align-items: flex-end; /* Alinhar o botao com A BASE (Parte baixa) do texto da esquerda (comando novo)*/
+    margin-bottom: 60px; /*Espaço entre o cabeçalho (texto e botao) e os card dos blogs*/
+    position: relative; /* Permite que o texto fique acima do texto de fundo (precisa disso pro Z index)*/
+    z-index: 2;
+}
+
+.blogs-subtitulo{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    display: block; /*garante que o texto fique em uma linha só NAO QUEBRA LINHAS*/
+    margin-bottom: 15px; /*espaço entre o título e a linha abaixo (titulo e subtitulo)*/
+}
+
+.blogs-titulo-principal{
+    font-size: 56px;
+    color: #222222;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.parte-roxa{
+    color: #5840ba;
+}
+
+.botao-ver-tudo{
+    text-decoration: none; /*tira o sublinhado do link IMPORTANTE*/
+    background: #b4e675;
+    color: #222222;
+    font-weight: 700;
+
+    display: inline-flex; /*permite alinhar itens dentro dele (?)*/
+    align-items: center; /*alinha os itens verticalmente (novo comando)*/
+
+    padding: 6px 25px 6px 6px; /*pading ASSIMETRICO diferente para cada lado para a bolinha encostar mais na borada ISSO É FIDELIDADE*/
+    border-radius: 50px; /*deixa as bordas arredondadas*/
+    gap: 15px; /*espaçamento entre o texto e a bolinha*/
+
+    transition: transform 0.3s ease; /* Suaviza a animação de hover só por ESTETICA*/
+}
+
+.icone-seta{
+    background: #ffffff; /*cor da bolinha*/
+    color: rgb(0, 0, 0); /*cor da seta*/
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /*deixa a bolinha redonda*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.botao-ver-tudo:hover {
+    transform: scale(1.05); /*aumenta o tamanho do botão ao passar o mouse (efeito legal)*/
+}
+
+/*--- parte dos cards ---*/
+.blogs-card-secao{
+    display: flex;
+    justify-content: space-between; /*separa os cards igualmente*/
+    gap: 30px; /*espaçamento entre os cards*/
+
+    /*GARANTIR QUE VAI FICAR NA FRENTE DO TEXTO GRANDE DE FUNDO*/
+    position: relative;
+    z-index: 2;
+}
+
+.blogs-card{
+    flex: 1; /*faz os cards terem o mesmo tamanho (importante)*/
+    overflow: hidden; /* Garante que nada saia dos limites do card (EXTREMA IMPORTANCIA)*/
+}
+
+.blogs-imagem-card{
+    width: 100%; /*garante que a imagem ocupe toda a largura do card APENAS*/
+    height: 250px; /*altura fixa para todas as imagens dos cards*/
+    border-radius: 30px;
+    overflow: hidden; /*corta o que sobrar da imagem pra fora da caixa*/
+    margin-bottom: 25px; /*espaço entre a imagem e o conteudo embaixo dela*/
+}
+
+.blogs-imagem-card img{
+    width: 100%; /*garante que a imagem ocupe toda a largura do container*/
+    height: 100%; /*garante que a imagem ocupe toda a altura do container*/
+    object-fit: cover; /*garante que a imagem preencha o container sem distorcer*/
+    filter: grayscale(100%); /* Deixa preto e branco como na foto original */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Prepara para animação de hover  apenas ESTETICA*/
+}
+
+.blogs-card:hover .blogs-imagem-card img {
+    filter: grayscale(0%); /* Volta a ter cor */
+    transform: scale(1.05); /* Dá um leve zoom */
+}
+
+.blogs-subtitulo-card{
+    display: inline-block; /* necessario pro padding e margin funcionarem*/
+
+    background: #b4e675;
+    color: #222222;
+    font-weight: 700;
+    font-size: 14px;
+
+    padding: 6px 18px; /* espaçamento interno do subtitulo pra fazer formato de pilula*/
+    border-radius: 20px;
+    margin-bottom: 15px; /* espaço entre o subtitulo e o titulo*/
+}
+
+.blogs-titulo-card{
+    font-size: 24px;
+    line-height: 1.3;
+    color: #222222;
+    font-weight: 700;
+    margin-bottom: 25px; /* espaço entre o titulo e o rodape*/
+}
+
+.blogs-rodape-card{
+    display: flex;
+    align-items: center;
+    gap: 25px; /* espaço entre os itens do rodape (AUTOR E DATA)*/
+    font-size: 16px;
+    color: #666666;
+}
+    
+/* Truque para as bolinhas coloridas antes do Autor e da Data */
+.blogs-autor-card, 
+.blogs-data-card {
+    display: inline-flex; /* Permite alinhar a bolinha com o texto */
+    align-items: center;
+    gap: 10px; /* Espaço entre a bolinha e o texto */
+    font-weight: 500;
+}
+
+/* Cria a bolinha ROXA antes de CADA um (autor e data) APENAS VISUALMENTE */
+.blogs-autor-card::before,
+.blogs-data-card::before {
+    content: ''; /* Cria um elemento vazio */
+    width: 10px;
+    height: 10px;
+    background-color: #5840ba; /* Cor roxa da sua paleta */
+    border-radius: 50%; /* Deixa totalmente redondo */
+    display: inline-block;
 }
