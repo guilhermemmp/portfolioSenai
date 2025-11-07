@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root{
     --roxo:#5841bf;
 
@@ -176,12 +178,87 @@ u{
     gap: 2em;
 }
 
+.testimonials-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.testimonials-text h4{
+    font-size: 1.2em;
+}
+
+
+.testimonials-text h1{
+    font-size: 2.6em;
+}
+
 .testimonials-card{
+    position: relative;
     margin-top: 2em;
     background-color: #f6f6f6;
     display: flex;
     gap: 3em;
     padding: 2em 6em;
+}
+
+.setaEsquerda{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    left: -40px;
+    border: white solid 10px;
+    padding: 2rem;
+}
+
+#imgSetaEsquerda{
+    transform: scaleX(-1)  translateX(8%);
+    height: 2.3em;
+    width:  auto;
+    filter: invert(1);
+}
+
+.setaDireita{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--roxo);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    right: -40px;
+    border: white solid 10px;
+    padding: 2rem;
+}
+
+#imgSetaDireita{
+    height: 2.3em;
+    width:  auto;
+    filter: invert(1);
+    transform: translateX(8%);
+}
+
+.aspas{
+    position: absolute;
+    background-color: #b4e675;
+    border: #f6f6f6 solid 10px;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+#imgAspas{
+    height: 2.3em;
+    width:  auto;
 }
 
 .testimonials-card-text{
@@ -378,4 +455,667 @@ u{
     background-color: #5840ba; /* Cor roxa da sua paleta */
     border-radius: 50%; /* Deixa totalmente redondo */
     display: inline-block;
+}
+
+
+/* -- Seção Sobre do Luiz -- */
+
+.sobre{
+    width: 100%;
+    background-color: white;
+    height: 1000px;
+    position:flex;
+    font-family: 'Poppins', sans-serif;
+    }.experiencia3{
+        height: 70vh;
+        margin-top: 10rem;
+        margin-left: 20rem;
+        z-index: 2;  
+    }
+    .textao13{
+        font-size: 1.8rem;
+        margin-left: 62rem;
+        margin-top: -36rem;
+        z-index: 5;
+        position: absolute;
+        transition: transform 0.8s ease;
+     
+    }
+    .roxo13{
+        color: blueviolet;
+    }
+    .textao23{
+        font-size: 3.5rem;
+        margin-left: 62rem;
+        font-weight: 400;
+        width: 40rem;
+        z-index: 3;
+        position: absolute;
+        margin-top: -33rem;
+    }
+    .textao33{
+        color:#6C6C6C;
+        margin-left: 62rem;
+        width:35rem;
+        font-size:1rem;
+        z-index: 3;
+        position: absolute;
+        margin-top: -22rem;
+    }
+    .textao43{
+        font-weight: 900;
+        font-size: 2rem;
+        margin-left: 63rem;
+        margin-top:2rem;
+        z-index: 3;
+        position: absolute;
+        margin-top:-17.3rem;
+    }
+    .textao53{
+        color:#6C6C6C;
+        margin-left:63rem;
+        font-size: 1.7rem;
+        margin-top:-14.5rem;
+         z-index: 3;
+    }
+    .textao63{
+        font-weight: 900;
+        font-size: 2rem;
+        margin-left: 85rem;
+        margin-top: -5.6rem;
+    }
+    .textao73{
+        color:#6C6C6C;
+        margin-left:85rem;
+        font-size: 1.7rem;
+    }
+    .botoes3{
+        width:15rem; margin-left: 62.1rem;
+        height: 4rem;
+        background-color: black;
+        border-radius: 50rem;
+        margin-top:5rem;
+    }
+    .botao3{
+     background-color: white;
+        height: 3rem;
+        width: 3rem;
+        font-size: 2rem;
+        border-radius: 50rem;
+        color: black;
+        border-color: transparent;
+        padding-bottom: 1.4rem;
+        margin-left: 0.5rem;
+    }
+    .botao13{
+        width:10rem; margin-left: 1.5rem;
+        height: 4rem;
+        background-color: rgb(164,219,116);
+        border-radius: 50rem;
+        border-color: transparent;
+        font-size: 1.1rem;
+        transition: transform 0.8s ease;
+    }
+    .assinatura3{
+        height: 10rem;
+        width: 15rem;
+        margin-left: 83rem;
+        margin-top: -6.8rem;
+        transition: transform 0.8s ease;
+    }
+    .textao3::before{ /* Elemento que só existe visualemente*/
+        content: "About Me"; /* Texto que vai aparecer no fundo (NAO MEXER)*/
+        position: absolute; /* Permite posicionar o texto onde quiser (NAO MEXER)*/
+        top: 45%; /* Distância do topo (pra subir ou descer)*/
+        left:75%; /* Centraliza horizontalmente (NAO MEXER)*/
+        transform: translateX(-50%); /*Aparentemente Centraliza horizontalmente (NAO MEXER)*/
+       
+        font-size: 180px;
+        font-weight: 900;
+        color: #f3f3f3;
+        white-space: nowrap; /* Garante que o texto não quebre linha */
+        z-index: 0; /* Coloca o texto atrás dos outros elementos */
+    }
+    .botao13:hover{
+        background-color:rgb(178, 219, 142) ;
+        transform: scale(1.03);
+       
+    }
+    .textao13:hover{
+        transform: scale(1.3);
+    }
+    .assinatura3:hover{
+        transform: scale(1.3);
+    }
+
+.divserv2{
+    position: absolute;
+    margin-top: 0em;
+    margin-left: -1em;
+}
+.divserv2_1{
+    position: absolute;
+    margin-top: 7em;
+    margin-left: 6em;
+}
+.logo2{
+    color: #6049BC;
+    font-size: 9em;
+}
+.green2{
+    color: #A4DA72; position: absolute;
+    margin-top: 1.2em;
+    margin-left: 1em;
+    font-size: 200;  
+}
+.txtlogo2{
+    color: white;
+    font-size: 3em;
+    margin-left: 0.8em; margin-top: 0.1em;
+}
+.divserv2_2{
+    position: absolute;
+    margin-top: 12em;
+    margin-left: 7em;
+}
+.txtlogo2_1{
+    color: white;
+    font-size: 4em;
+    position: absolute;
+}
+.green2_1{
+    color:#A4DA72;
+    font-size: 4em;
+    margin-left: 1.7em;
+}
+.botao2{
+    background-color: white;
+    width: 13em; height: 3em;
+    border-radius: 2em;
+    position: relative;
+    margin-top: -4.5em; margin-left: 75em;
+    cursor: pointer;
+}
+.bt2{
+    background-color:#A4DA72;
+    border: transparent;
+    width: 12em; height: 3.6em;
+    margin-left: 3.6em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+.body2{
+    position: absolute;
+    margin-top: 23em;   margin-left: 7.5em;
+}
+.esf2{
+    background-color: white;
+    width: 25em; height: 32em;
+    border-radius: 47%;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+.esf2:hover{
+    transform: scale(1.05);
+}
+.esf3{
+    background-color: #EFEDF9;
+    width: 10em; height: 10em;
+    border-radius: 50%;
+    margin-left: 7.5em; margin-top: 3em;
+}
+.txtesf2{
+    text-align: center;
+}
+.btesf{
+    margin-left: 2.3em; margin-top: 0.5em;
+    width: 8em;    height: 2em;
+    background-color: transparent; color: #9C9C9C;
+    border: transparent;
+    font-size: 2em;
+}
+.esf2_1{
+    background-color: #715BC4;
+    width: 25em; height: 32em;
+    border-radius: 47%;
+    position: absolute;
+    margin-left: 35em;
+    transition: transform 0.3s ease;
+}
+.esf2_1:hover{
+    transform: scale(1.05);
+}
+.esf2_2{
+    background-color: #715BC4;
+    width: 25em; height: 32em;
+    border-radius: 47%;
+    position: absolute;
+    margin-left: 70em;
+    transition: transform 0.3s ease;
+}
+.esf2_2:hover{
+    transform: scale(1.05);
+}
+.esf3_1{
+    background-color: #7F6BCA;
+    width: 10em; height: 10em;
+    border-radius: 50%;
+    margin-left: 7.5em; margin-top: 3em;
+}
+.txtesf2_16{
+    text-align: center;
+    color: white;
+}
+.img2{
+    background-image: url('img/seta.png');
+    background-size: 2.5em;      
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5em;                
+    height: 2.5em;              
+    position: absolute;
+    top: 0.3em;                  
+    left: 0.4em;      
+}
+.imgesf1{
+    background-image: url(img/ux.png);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.imgesf2{
+    background-image: url(img/alicate.png);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.imgesf3{
+    background-image: url(img/jornalzinho.png);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+.divserv2{
+    position: absolute;
+    margin-top: 0em;
+    margin-left: -1em;
+}
+.divserv2_1{
+    position: absolute;
+    margin-top: 7em;
+    margin-left: 6em;
+}
+.logo2{
+    margin-top: 0.8em;
+    color: #6049BC;
+    font-size: 9em;
+}
+.green2{
+    color: #A4DA72; position: absolute;
+    margin-top: 1.2em;
+    margin-left: 1em;
+    font-size: 200;  
+}
+.txtlogo2{
+    color: white;
+    font-size: 3em;
+    margin-left: 0.8em; margin-top: 0.1em;
+}
+.divserv2_2{
+    position: absolute;
+    margin-top: 12em;
+    margin-left: 7em;
+}
+.txtlogo2_1{
+    color: white;
+    font-size: 4em;
+    position: absolute;
+}
+.green2_1{
+    color:#A4DA72;
+    font-size: 4em;
+    margin-left: 1.7em;
+}
+.botao2{
+    background-color: white;
+    width: 13em; height: 3em;
+    border-radius: 2em;
+    position: relative;
+    margin-top: -4.5em; margin-left: 75em;
+    cursor: pointer;
+}
+.bt2{
+    background-color:#A4DA72;
+    border: transparent;
+    width: 12em; height: 3.6em;
+    margin-left: 3.6em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+.body2{
+    position: absolute;
+    margin-top: 23em;   margin-left: 7.5em;
+}
+.esf2{
+    background-color: white;
+    width: 25em; height: 32em;
+    border-radius: 47%;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+.esf2:hover{
+    transform: scale(1.05);
+}
+.esf3{
+    background-color: #EFEDF9;
+    width: 10em; height: 10em;
+    border-radius: 50%;
+    margin-left: 7.5em; margin-top: 3em;
+}
+.txtesf2{
+    text-align: center;
+}
+.btesf{
+    margin-left: 2.3em; margin-top: 0.5em;
+    width: 8em;    height: 2em;
+    background-color: transparent; color: #9C9C9C;
+    border: transparent;
+    font-size: 2em;
+}
+.esf2_1{
+    background-color: #715BC4;
+    width: 25em; height: 32em;
+    border-radius: 47%;
+    position: absolute;
+    margin-left: 35em;
+    transition: transform 0.3s ease;
+}
+.esf2_1:hover{
+    transform: scale(1.05);
+}
+.esf2_2{
+    background-color: #715BC4;
+    width: 25em; height: 32em;
+    border-radius: 47%;
+    position: absolute;
+    margin-left: 70em;
+    transition: transform 0.3s ease;
+}
+.esf2_2:hover{
+    transform: scale(1.05);
+}
+.esf3_1{
+    background-color: #7F6BCA;
+    width: 10em; height: 10em;
+    border-radius: 50%;
+    margin-left: 7.5em; margin-top: 3em;
+}
+.txtesf2_1{
+    text-align: center;
+    color: white;
+}
+.img2{
+    background-image: url('img/seta2.png');
+    background-size: 2.5em;      
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5em;                
+    height: 2.5em;              
+    position: absolute;
+    top: 0.3em;                  
+    left: 0.4em;      
+}
+.imgesf1{
+    background-image: url(img/ux.png);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.imgesf2{
+    background-image: url(img/alicate.png);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.imgesf3{
+    background-image: url(img/jornalzinho.png);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divserv6{
+    position: absolute;
+    margin-top: 0em;
+    margin-left: -1em;
+}
+.divserv6_1{
+    position: absolute;
+    margin-top: 7em;
+    margin-left: 6em;
+}
+.logo6{
+    color: #6049BC;
+    font-size: 9em;
+}
+.green6{
+    color: #A4DA76; position: absolute;
+    margin-top: 1.6em;
+    margin-left: 1em;
+    font-size: 600;  
+}
+.txtlogo6{
+    color: white;
+    font-size: 3em;
+    margin-left: 0.8em; margin-top: 0.1em;
+}
+.divserv6_6{
+    position: absolute;
+    margin-top: 10em;
+    margin-left: 7em;
+}
+.txtlogo6_1{
+    color: white;
+    font-size: 4em;
+    position: absolute;
+}
+.green6_1{
+    color:#A4DA76;
+    font-size: 4em;
+    margin-left: 1.7em;
+}
+.botao6{
+    background-color: white;
+    width: 13em; height: 3em;
+    border-radius: 6em;
+    position: relative;
+    margin-top: -4.5em; margin-left: 75em;
+}
+.esferinha6{
+    background-image: url('img/seta\ 1.png');
+    background-size: 2.5em;      /* controla o tamanho da imagem */
+    background-repeat: no-repeat;
+    background-position: center; /* centraliza a imagem */
+    width: 2.5em;                /* largura da área da imagem */
+    height: 2.5em;               /* altura da área da imagem */
+    position: absolute;
+    top: 0.3em;                  /* ajusta a posição vertical */
+    left: 0.4em;      
+}
+.bt6{
+    background-color:#A4DA76;
+    border: transparent;
+    width: 16em; height: 3.6em;
+    margin-left: 3.6em;
+    border-radius: 6em
+}
+.body6{
+    position: absolute;
+    margin-top: 63em;   margin-left: 7.5em;
+}
+.esf6{
+    background-color: white;
+    width: 65em; height: 36em;
+    border-radius: 47%;
+    position: absolute;
+}
+.esf3{
+    background-color: #EFEDF9;
+    width: 10em; height: 10em;
+    border-radius: 50%;
+    margin-left: 7.5em; margin-top: 3em;
+}
+.txtesf6{
+    text-align: center;
+}
+.btesf{
+    margin-left: 6.3em; margin-top: 0.5em;
+    width: 8em;    height: 6em;
+    background-color: transparent; color: #9C9C9C;
+    border: transparent;
+    font-size: 6em;
+}
+.esf6_1{
+    background-color: #715BC4;
+    width: 65em; height: 36em;
+    border-radius: 47%;
+    position: absolute;
+    margin-left: 35em;
+}
+.esf6_6{
+    background-color: #715BC4;
+    width: 65em; height: 36em;
+    border-radius: 47%;
+    position: absolute;
+    margin-left: 70em;
+}
+.esf3_1{
+    background-color: #7F6BCA;
+    width: 10em; height: 10em;
+    border-radius: 50%;
+    margin-left: 7.5em; margin-top: 3em;
+}
+.txtesf6_1{
+    text-align: center;
+    color: white;
+}
+.secao6{
+    height: 32em;
+    width: 82em;
+    background-color: #7F6BCA;
+    margin-top: 20em;
+    margin-left: 13em;
+    border-radius: 5em;
+    border-color: transparent;
+    position: absolute;
+    overflow: hidden;
+     
+   
+}
+.tag6{
+    background-color: rgb(164,219,116);
+    height: 2.37em;
+    width: 8.5em;
+    border-radius: 1.7em;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tag61{
+    background-color: rgb(164,219,116);
+    height: 2.37em;
+    width: 8.5em;
+    border-radius: 1.7em;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tag62{
+    background-color: rgb(164,219,116);
+    height: 2.37em;
+    width: 8.5em;
+    border-radius: 1.7em;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.tags6{
+    display: flex;
+    flex-direction: row;
+    gap:1em;
+    margin-top: 5em;
+    margin-left: 41em;
+}
+.imagem6{
+    height: 35em;
+    border-radius: 1em;
+    position: absolute;
+    margin-top: -8em;
+    margin-left: -9em;
+    overflow: hidden;
+}
+.textinho6{
+    color: white;
+    margin-left: 21em;
+    margin-top: 1em;
+    font-size: xx-large;
+    width: 10em;
+}
+.textinho61{
+    color: rgb(206, 205, 205);
+    margin-left: 37.5em;
+    margin-top: 1em;
+    font-size: large;
+    width: 26em;
+}
+.botao61{
+    background-color: white;
+    width: 10em; height: 3em;
+    border-radius: 6em;
+    position: relative;
+    margin-top: 5em;
+     margin-left: 43em;
+}
+.esferinha61{
+    background-image: url('img/seta\ 1.png');
+    background-size: 2.5em;      /* controla o tamanho da imagem */
+    background-repeat: no-repeat;
+    background-position: center; /* centraliza a imagem */
+    width: 2.5em;                /* largura da área da imagem */
+    height: 2.5em;               /* altura da área da imagem */
+    position: absolute;
+    top: 0.3em;                  /* ajusta a posição vertical */
+    left: 0.4em;      
+}
+.bt61{
+    background-color:#A4DA76;
+    border: transparent;
+    width: 10em; height: 3.6em;
+    margin-left: 3.6em;
+    border-radius: 6em
+}
+#projects{
+    background-color: #5840BA;
+    position: relative;
 }

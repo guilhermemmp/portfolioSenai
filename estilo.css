@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root{
+    --roxo:#5841bf;
+}
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #f8f8f8;
+    background-image:
+        linear-gradient(to right, rgba(224,224,224,0.3) 2px, transparent 1px),
+        linear-gradient(to bottom, rgba(224,224,224,0.3) 2px, transparent 1px);
+    background-size: 200px 200px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.menu{
+    display: flex;
+    gap: 40px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.menu a:hover{
+    color: blueviolet;
+    text-decoration: underline blueviolet;
+}
+
+#logo{
+    height: 50px;
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+main{
+    min-height: 95vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-content{
+    position: absolute;
+    bottom: 68vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#mulher{
+    position: absolute;
+    bottom: 0;
+    height: 70vh;
+    max-height: 630px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(100);
+    z-index: 0;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: white;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+.btn{
+    background-color: transparent;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-size: 22px;
+}
+
+#portfolio{
+    background-color: blueviolet;
+    color: white;
+}
+
+#contact{
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* ==========================================
+   SEÇÃO SERVICES — **CORRIGIDA**
+========================================== */
+#services{
+    min-height: 100vh;
+    background-color: #5840ba;
+    padding-bottom: 20vh; /* ADICIONADO: impede de invadir outras seções */
+    position: relative;
+}
+
+.divserv2,
+.divserv2_1,
+.divserv2_2,
+.body2{
+    position: relative !important; /* REMOVE ABSOLUTE QUE QUEBRAVA TUDO */
+}
+
+.body2{
+    display: flex;
+    gap: 10em;
+    margin-top: 23em;
+}
+
+/* seus cards circulares */
+.esf2, .esf2_1, .esf2_2{
+    border-radius: 47%;
+    width: 25em;
+    height: 32em;
+    transition: .3s;
+}
+
+.esf2{ background:white; }
+.esf2_1{ background:#715BC4; }
+.esf2_2{ background:#715BC4; }
+
+.esf2:hover, .esf2_1:hover, .esf2_2:hover{
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   ABOUT — SEM ABSOLUTE INVADINDO
+========================================== */
+.sobre{
+    width: 100%;
+    background:white;
+    padding: 8rem 6rem;
+    position: relative;
+}
+
+.experiencia3{
+    float:left;
+    height: 70vh;
+    margin-right: 5rem;
+}
+
+.textao13, .textao23, .textao33, .textao43,
+.textao53, .textao63, .textao73, .botoes3{
+    position: relative !important;
+    margin-left: 0 !important;
+}
+
+/* ==========================================
+   PROJECTS — ***AQUI ESTAVA O PROBLEMA***
+========================================== */
+#projects{
+    padding: 15rem 0 10rem 0;
+    background:white;
+    position: relative;
+    z-index: 5; /* GARANTE VISIBILIDADE */
+}
+
+.divserv6,
+.divserv6_1,
+.divserv6_6{
+    position: relative !important;
+}
+
+.secao6{
+    position: relative !important;
+    width: 82em;
+    height: 32em;
+    background: #7F6BCA;
+    margin: 10em auto 0 auto;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+/* NENHUM ABSOLUTE AQUI AGORA */
+.tags6{
+    display: flex;
+    gap: 1em;
+    margin-left: 41em;
+    margin-top: 3em;
+}
+
+.textinho6, .textinho61, .botao61{
+    position: relative;
+}
+
+/* ==========================================
+   BLOGS / TESTIMONIALS seguem iguais
+========================================== */
+
